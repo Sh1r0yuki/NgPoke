@@ -2,6 +2,9 @@
     <mat-card-header>
         <mat-card-title>
             {{name}}
+            <button mat-icon-button (click)="onAddFavorite.emit()">
+                <mat-icon [style]="{opacity: isIconActive ? 1 : .2}">favorite</mat-icon>
+            </button>
         </mat-card-title>
     </mat-card-header>
     <mat-card-content>

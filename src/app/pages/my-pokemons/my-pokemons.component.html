@@ -1,1 +1,10 @@
-<p>my-pokemons works!</p>
+<div class="container">
+    @if(pokemonList.length) {
+    <div class="cards-container">
+        @for (item of pokemonList; track $index) {
+        <app-pokemon-card [name]="item.pokemonName" [detailUrl]="item.detailUrl" [isIconActive]="true"
+            (onAddFavorite)="onUserRm(item.pokemonId)"></app-pokemon-card>
+        }
+    </div>
+    }
+</div>
